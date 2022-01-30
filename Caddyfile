@@ -1,0 +1,9 @@
+# Do not try to audo-setup TLS
+{
+    auto_https off
+}
+# Listen on 80
+:80 {
+    # Proxy jekyll on port 4000
+    reverse_proxy * http://127.0.0.1:4000
+}
